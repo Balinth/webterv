@@ -1,5 +1,5 @@
 body {
-    background-color: #c2f3ff;
+    background-color: #d8d8d8;
     text-align: center;
     list-style-position: inside;
 }
@@ -13,6 +13,34 @@ body {
 }
 
 .todoListItem {
-    background-color: #f08080;
+    background-color: #818181;
     margin: 10;
+}
+
+.sidenav {
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
 }
