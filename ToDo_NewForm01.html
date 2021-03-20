@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<!-- Head -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="HB&CsD" />
+    <meta name="description" content="Ez az oldal a teendőid kezelésére szolgál. Hogy el ne ússz a dolgaiddal!" />
+    <meta name="keywords" content="teendők, teendok, to-do, todo, to do" />
+    <title>Teendők</title>
+    <link rel="icon" href="img/todo-icon_01.png" />
+    <link rel="stylesheet" href="css/todo_style_01.css" />
+<!--    <script type="application/javascript">
+        alert("Ha van mit tenned, itt lesz mit tenned!");
+    </script> -->
+</head>
+
+<!-- Body -->
+
+<body>
+
+<!-- Header -->
+
+<header>
+    <h1>Teendők</h1>
+    <p>Tenni vagy nem tenni: az itt a kérdés! - Hamlet, dán királyfi</p>
+    <img id="header-icon" src="img/todo-icon_01.png" alt=""/>
+    <br />
+</header>
+
+<!-- Nav -->
+
+<nav id="nav">
+    <ul id="top-nav">
+        <li><a href="#XXXX">Kezdőlap</a></li>
+        <li><a href="#XXXX">Teendők listája</a></li>
+        <li><a href="#XXXX">3</a></li>
+        <li><a href="#XXXX">4</a></li>
+    </ul>
+</nav>
+
+<!-- Main -->
+
+<main>
+    <!-- Form Intro -->
+    <section id="form-intro">
+        <h2>Új teendő</h2>
+        <p>Itt vehetsz fel új teendőket.</p>
+        <p>Add meg az adatokat. Ha minden okés, "Rögzít". Ha nagyon elrontottad, kezdd "Újra". Ha mégssem vennél fel új teendőt, "Mégse", és örülj, hogy ennyivel is kevesebb a teendőd.</p>
+    </section>
+    <!-- Form -->
+    <fieldset id="form-itself">
+        <legend>Új feladat</legend>
+        <form action="ToDo_NewForm01.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
+            <label for="task-title">Feladat:</label><input class="textinput" id="task-title" name="task-title" type="text" size="100" maxlength="100" placeholder="Feladat neve" required /> <br />
+            <label for="task-tags">Címkék:</label><input class="textinput" id="task-tags" name="task-tags" type="text" size="100" maxlength="100" placeholder="Címkék" /><br />
+            <label for="task-description">Leírás:</label><textarea class="textinput" id="task-description" name="task-description" rows="10" maxlength="1000" placeholder="Feladat leírása (max. 1000 karakter)"></textarea><br />
+            <label for="task-duedate">Határidő:</label><input class="dateinput" id="task-duedate" name="task-duedate" type="date" required /><br />
+            <label for="task-regdate">Rögzítetted:</label><input class="dateinput" id="task-regdate" name="task-regdate" type="date" required /><br />
+            <input class="buttoninput" id="submit" name="submit" type="submit" value="Rögzít" />
+            <input class="buttoninput" id="reset" name="reset" type="reset" value="Újra" />
+            <input class="buttoninput" id="cancel" name="cancel" type="button" value="Mégse" onclick="XXXX"/>
+        </form>
+    </fieldset>
+
+</main>
+
+<!-- Footer -->
+
+<footer>
+    <h2>Kapcsolat</h2>
+    <p>XXXX</p>
+    <h2>Konkurencia</h2>
+    <p>A Microsoft megoldását itt találod: <a href="https://todo.microsoft.com/tasks/" target="_blank">MS TODO</a> </p>
+</footer>
+
+</body>
+
+</html>
