@@ -4,15 +4,15 @@ body {
     list-style-position: inside;
 }
 
-.inlineHeader {
+.inlineheader {
     display: inline;
 }
 
-.todoList {
+.todolist {
     display: inline-block;
 }
 
-.todoListItem {
+.todolistitem {
     background-color: #818181;
     margin: 10;
 }

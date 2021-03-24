@@ -1,0 +1,39 @@
+To-Do weboldal
+
+Lapok:
+Kezdőlap
+ - fejléc: logó, cím 
+ - menü: menüelemek, dátumidő, bejelentkezés vagy fiókref és kijelentkezés
+ - középen valami motiváló bullshit szöveg/idézetek a teendők elvégzéséról
+ - lábléc: készítette, kapcsolat
+
+Bejelentkezés/regisztráció
+ - fejléc: logó, cím 
+ - menü: menüelemek, dátumidő
+ - bejelentkezési és regisztrációs panel -> bejelentkezés után a teendőlistára ugrik
+ - lábléc: készítette, kapcsolat
+
+Teendőlista
+ - fejléc: logó, cím 
+ - menü: menüelemek, dátumidő, bejelentkezés vagy fiókref és kijelentkezés
+ - középen a teendőlistatábla:
+    - mezők: cím, határidő, sürgősség, kész (a mezők interaktívak, rákkattintva módosítható az érték, illetve a címre kattintva megnyílik az elem a Teendő részletei lapon)
+	- rendezés alap esetben határidő szerint, amúgy szűrés, rendezés a tábla fölött
+ - lábléc: készítette, kapcsolat
+
+Teendő felvétele
+ - fejléc: logó, cím 
+ - menü: menüelemek, dátumidő, bejelentkezés vagy fiókref és kijelentkezés
+ - középen a teendő űrlap:
+    - mezők: cím, rögzítés időpontja, határidő, leírás, sürgősség, kész, címkék
+	- gombok: mentés, visszaállítás, mégse
+ - lábléc: készítette, kapcsolat
+
+Teendő részletei / módosítás
+ - fejléc: logó, cím 
+ - menü: menüelemek, dátumidő, bejelentkezés vagy fiókref és kijelentkezés
+ - középen a teendő űrlap:
+    - mezők: cím, rögzítés időpontja, határidő, leírás, sürgősség, kész, címkék
+	- gombok: mentés, mégse, törlés
+ - lábléc: készítette, kapcsolat
+

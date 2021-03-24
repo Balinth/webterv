@@ -11,3 +11,9 @@
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/vscode
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/

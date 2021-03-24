@@ -1,31 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="author" content="HB&CsD" />
-        <meta name="description" content="Hogy el ne ússz a dolgaiddal!" />
-        <meta name="keywords" content="teendő, teendo, feladat, to-do, todo, to do" />
-        <title>Todo</title>
-        <link rel="icon" href="../img/icon.png" />
-        <link rel="stylesheet" href="../css/main.css" />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="HB&CsD" />
+    <meta name="description" content="Hogy el ne ússz a dolgaiddal!" />
+    <meta name="keywords" content="teendő, teendo, feladat, to-do, todo, to do" />
+    <title>TODO</title>
+    <link rel="icon" href="../img/icon.png" />
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
 
-    <body>
-        <header>
-            <h1>TODO</h1>
-            <p>Ha van mit tenned, itt lesz mit tenned!</p>
-            <img id="header-icon" src="../img/icon.png" alt="" />
-        </header>
+<body>
+<header>
+    <div id="brand">
+        <h2>TODO</h2>
+        <h3>TADAM! És kész is!</h3>
+        <p>Ha van mit tenned, itt lesz mit tenned!</p>
+        <img id="header-icon" src="../img/icon.png" alt="" />
+    </div>
+    <div id="usertag">
+        <p>Jelentkezz be!</p>
+    </div>
+    <div id="timespace">
+        <p>2021.03.28.12:00:00</p>
+        <p>Budapest</p>
+    </div>
+</header>
 
-        <nav id="nav">
-            <ul id="top-nav">
-                <li><a href="#XXXX">Kezdőlap</a></li>
-                <li><a href="#XXXX">Teendők</a></li>
-                <li><a href="#XXXX">3</a></li>
-                <li><a href="#XXXX">4</a></li>
-            </ul>
-        </nav>
+<nav>
+    <a href="todo_landing.html" target="_self">Kezdőlap</a>
+</nav>
 
-    </body>
+<main>
+    <section id="loginintro">
+        <h1>Belépés</h1>
+        <p><strong>Jelentkezz be</strong> a felhasználói adataiddal, vagy ha még nincsenek, <strong>regisztrálj</strong>.</p>
+    </section>
+    <fieldset id="loginform">
+        <legend>Bejelentkezés</legend>
+        <form action="todo_list.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
+            <label for="loginemail">E-mail</label><input id="loginemail" name="logineml" type="email" maxlength="50" placeholder="Nagybetűkre figyelj" required/> <br />
+            <label for="loginpw">Jelszó</label><input id="loginpw" name="loginpw" type="password" maxlength="25" placeholder="Nagybetűkre figyelj" required/><br />
+            <input type="submit" value="Bejelentkezem"/><br />
+        </form>
+    </fieldset>
+    <fieldset id="regform">
+        <legend>Regisztráció</legend>
+        <form action="todo_landing.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
+            <label for="regemail">E-mail</label><input id="regemail" name="logineml" type="email" maxlength="50" placeholder="Max. 50 karakter" required/> <br />
+            <label for="regname">Felhasználónév</label><input id="regname" name="username" type="text" maxlength="25" placeholder="Max. 25 karakter" required/> <br />
+            <label for="regpw">Jelszó</label><input id="regpw" name="loginpw" type="password" maxlength="25" placeholder="Max. 25 karakter" required/><br />
+            <input type="submit" value="Regisztrálok"/><br />
+        </form>
+    </fieldset>
+</main>
+
+<article id="motivation">
+    <h2>Napi lelkesítő</h2>
+    <p class="quote"><q>Annyira tettre kész vagyok, hogy a nevem valójában ige kellene, hogy legyen.</q></p> <p class="commissar">- graffiti</p>
+    <p class="quote"><q>A tett halála az okoskodás.</q></p> <p class="commissar">- Lucifer</p>
+    <p class="quote"><q>A racionalitás a tettekben lakozik, nem a gondolatokban vagy abban, amit 'hisz' az ember.</q></p> <p class="commissar">- Nassim Nicholas Taleb</p>
+</article>
+
+<footer>
+    <div id="contact">
+        <p class="tag">Készítette:</p> <p class="value">Harmat Bálint &amp; Csobay Dávid</p>
+        <p class="tag">Kapcsolat:</p> <a class="value" href="https://www.coosp.etr.u-szeged.hu/" target="_blank">@ SZTE Coospace</a>
+        <p class="tag">Copy?</p> <p class="value">Right!</p>
+    </div>
+
+    <div id="version">
+        <p class="tag">Verzió:</p> <p class="value">1.0</p>
+        <p class="tag">Frissítve:</p> <p class="value">2021. 03. 28.</p>
+        <p class="tag">Tesztelt böngészők:</p> <p class="value">Chrome, Edge</p>
+    </div>
+</footer>
+
+</body>
+
 </html>
