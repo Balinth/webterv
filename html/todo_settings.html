@@ -40,30 +40,16 @@
 <main>
     <section id="loginintro">
         <h1>Beállítások</h1>
-        <p>Itt <strong>módosíthatod</strong> a felhasználói adataidat, valamint az értesítési beállításaidat.</p>
+        <p>Itt <strong>módosíthatod</strong> a felhasználói adataidat.</p>
     </section>
     <fieldset id="userdataform">
         <legend>Felhasználói adatok</legend>
         <form action="todo_settings.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
             <label for="useremail">E-mail</label><input id="useremail" name="logineml" type="email" maxlength="50" value="elek.todo@gmail.com" required/> <br />
             <label for="username">Felhasználónév</label><input id="username" name="username" type="text" maxlength="25" value="Elek" required/> <br />
-            <label for="notifemail">Másodlagos értesítési e-mail</label><input id="notifemail" name="notifeml" type="email" maxlength="50" value="elek.todo@iroda.com"/> <br />
             <label for="userpw">Jelszó</label><input id="userpw" name="loginpw" type="password" maxlength="25" value="t1tk0s.j3lsz0" required/><br />
             <label for="userpic">Kép</label><input id="userpic" name="userpic" type="file"/><br />
             <img id="userpicprev" src="../img/userimage.jfif" alt="Nincs kép"/>
-            <input type="submit" value="Módosítás"/><br />
-        </form>
-    </fieldset>
-    <fieldset id="notifsettingsform">
-        <legend>Értesítési beállítások</legend>
-        <form action="todo_settings.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
-            <label for="emailnotifsameday">Aznapi emlékeztető e-mail</label><input id="emailnotifsameday" name="emailnotifsameday" type="checkbox" checked/>
-            <input id="emailnotifsamedaytime" name="emailnotifsamedaytime" type="time" value="09:00:00"/> <label for="emailnotifsamedaytime">időpontban</label><br />
-            <label for="emailnotifprevious">Előzetes emlékeztető e-mail</label><input id="emailnotifprevious" name="emailnotifsameday" type="checkbox" checked/>
-            <input id="emailnotifpreviousdays" name="emailnotifsamedaytime" type="number" min="1" value="1"/> <label for="emailnotifpreviousdays">nappal előre</label><br />
-            <label for="desktopnotif">Asztali emlékeztető értesítés</label><input id="desktopnotif" name="desktopnotif" type="checkbox" checked/><br />
-            <label for="emailnotifstatus">Összefoglaló e-mail állapotváltáskor</label><input id="emailnotifstatus" name="emailnotifstatus" type="checkbox" checked/><br />
-            <label for="emailsummaryweekly">Heti összesítő e-mail</label><input id="emailsummaryweekly" name="emailnotifstatus" type="checkbox" checked/><br />
             <input type="submit" value="Módosítás"/><br />
         </form>
     </fieldset>
@@ -71,9 +57,11 @@
 
 <article id="motivation">
     <h2>Napi lelkesítő</h2>
-    <p class="quote"><q>Annyira tettre kész vagyok, hogy a nevem valójában ige kellene, hogy legyen.</q></p> <p class="commissar">- graffiti</p>
-    <p class="quote"><q>A tett halála az okoskodás.</q></p> <p class="commissar">- Lucifer</p>
-    <p class="quote"><q>A racionalitás a tettekben lakozik, nem a gondolatokban vagy abban, amit 'hisz' az ember.</q></p> <p class="commissar">- Nassim Nicholas Taleb</p>
+    <ul>
+        <li class="quote"><q>Annyira tettre kész vagyok, hogy a nevem valójában ige kellene, hogy legyen.</q><br /><span class="commissar">- graffiti</span></li>
+        <li class="quote"><q>A tett halála az okoskodás.</q><br /><span class="commissar">- Lucifer, Az ember tragédiája</span></li>
+        <li class="quote"><q>A racionalitás a tettekben lakozik, nem a gondolatokban vagy abban, amit 'hisz' az ember.</q><br /><span class="commissar">- Nassim Nicholas Taleb</span></li>
+    </ul>
 </article>
 
 <footer>
