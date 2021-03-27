@@ -1,20 +1,59 @@
 body {
-    background-color: #d8d8d8;
+    background-color: #12232E;
     text-align: center;
     list-style-position: inside;
+    color: #ffffff;
 }
 
 .inlineheader {
     display: inline;
 }
 
+#brand {
+    background-color: #007CC7;
+}
+
 .todolist {
     display: inline-block;
 }
 
+#listintro{
+    text-align: left;
+    margin: 1rem auto;
+}
+
+#flexbox {
+    display: flex;
+    justify-content: right;
+    margin-left: 260px;
+    text-align: right;
+}
+
+.username {
+    margin: 1rem;
+    font-size: 22px;
+}
+
+.datelocation {
+    margin:  1rem;
+}
+
+table {
+    border-spacing: 1em;
+    margin: 1rem auto;
+}
+td {
+    padding: 1rem 1rem;
+}
+
 .todolistitem {
-    background-color: #818181;
-    margin: 10;
+    background-color: #007CC7;
+    margin: 10px;
+    padding: 10px;
+}
+
+.todolistitem a {
+    color: white;
 }
 
 .sidenav {
@@ -24,7 +63,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #4DA8DA;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -33,10 +72,11 @@ body {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     margin-bottom: 20px;
-  }
+}
+
 
 #footer {
     position: absolute;
