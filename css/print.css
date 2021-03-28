@@ -1,0 +1,135 @@
+body {
+    text-align: center;
+    list-style-position: inside;
+    color: black;
+}
+
+.inlineheader {
+    display: inline;
+}
+
+#brand {
+}
+
+.todolist {
+    display: inline-block;
+}
+
+#listintro{
+    text-align: left;
+    margin: 1rem auto;
+}
+
+#flexbox {
+    display: inline;
+    justify-content: right;
+    margin-left: 260px;
+    text-align: right;
+}
+
+#motivation {
+    page-break-before: always;
+}
+
+#contact {
+    margin: 0rem;
+}
+
+#version {
+    margin: 0rem;
+}
+
+.tag {
+    text-align: left;
+}
+
+.value {
+    margin-left: 20px;
+    text-align: left;
+    display: block;
+    font-weight: bold;
+}
+
+.value.right {
+    margin-right: 20px;
+}
+
+.quote {
+    font-style: italic;
+    margin: 2rem;
+}
+
+.commissar {
+    font-weight: bold;
+}
+
+#coospacelink {
+    text-align: left;
+}
+
+.username {
+    margin: 1rem;
+    font-size: 22px;
+}
+
+.datelocation {
+    margin:  1rem;
+}
+
+table {
+    border-spacing: 1em;
+    margin: 1rem auto;
+}
+td {
+    padding: 0rem 0rem;
+}
+
+.todolistitem {
+    background-color: white;
+    margin: 1px;
+    padding: 1px;
+}
+
+.todolistitem a {
+    color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: left 0.3s; /* Transition effect when sliding down (and up) */
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    margin-bottom: 20px;
+}
+.sidenav a:hover {
+    background-color: white;
+}
+
+footer {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    bottom: 0px;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
