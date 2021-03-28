@@ -165,13 +165,13 @@ footer {
     border:none;
 }
 
-#modify {
+.ok {
     display: inline-block;
     text-align: left;
     background-color: #4DA8DA;
 }
 
-#cancel {
+.cancel {
     background-color: #007CC7;
 }
 
@@ -179,4 +179,23 @@ footer {
 .buttoninput:hover {
     border: none;
     box-shadow: 0px 0px 10px #777;
+}
+
+.textinput, .dateinput {
+    background-color: #4DA8DA;
+    border-radius: 0px;
+    border-style: none;
+    box-shadow: 0px;
+    margin: 0.5rem;
+    color: white;
+}
+
+.inputlabel {
+    vertical-align: top;
+}
+
+#todoform {
+    margin-left: 260px;
+    /*width: 500px;*/
+    display: inline;
 }
