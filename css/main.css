@@ -147,11 +147,16 @@ footer {
     text-align: left;
 }
 
-#details {
+#details, #todoform, #userdataform, #loginform, #regform  {
     margin-left: 260px;
     /*width: 500px;*/
     border: #4DA8DA;
     display: inline;
+    margin-top: 1rem;
+}
+
+#regform {
+    vertical-align: top;
 }
 
 .buttoninput {
@@ -192,10 +197,4 @@ footer {
 
 .inputlabel {
     vertical-align: top;
-}
-
-#todoform {
-    margin-left: 260px;
-    /*width: 500px;*/
-    display: inline;
 }
