@@ -109,8 +109,15 @@ td {
   overflow-x: hidden;
   padding-top: 20px;
   transition: left 0.3s; /* Transition effect when sliding down (and up) */
+  box-shadow: black;
 }
 
+.bordershadow {
+	height: 70px;
+	width: 80%;
+	line-height: 70px;
+	text-align: center;
+}
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
@@ -118,9 +125,11 @@ td {
     color: #ffffff;
     display: block;
     margin-bottom: 20px;
+	transition: all 200ms ease-out;
 }
 .sidenav a:hover {
     background-color: #007CC7;
+	box-shadow: 0 0 6px black;
 }
 
 footer {
@@ -136,4 +145,38 @@ footer {
 
 .left {
     text-align: left;
+}
+
+#details {
+    margin-left: 260px;
+    /*width: 500px;*/
+    border: #4DA8DA;
+    display: inline;
+}
+
+.buttoninput {
+    margin: 1rem;
+    border-radius:6px;
+    color: #fff;
+    font-family: 'Oswald';
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+#modify {
+    display: inline-block;
+    text-align: left;
+    background-color: #4DA8DA;
+}
+
+#cancel {
+    background-color: #007CC7;
+}
+
+
+.buttoninput:hover {
+    border: none;
+    box-shadow: 0px 0px 10px #777;
 }

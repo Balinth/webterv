@@ -13,21 +13,33 @@
 </head>
 
 <body>
-<header>
-    <div id="brand">
-        <h2>TODO</h2>
-        <h3>TADAM! És kész is!</h3>
-        <p>Ha van mit tenned, itt lesz mit tenned!</p>
-    </div>
-    <div id="usertag">
-        <p>Todo Elek</p>
-        <img id="usericon" src="../img/userimage.jfif" alt=""/>
-    </div>
-    <div id="timespace">
-        <p>2021.03.28.12:00:00</p>
-        <p>Budapest</p>
-    </div>
-</header>
+    <header>
+        <div id="brand">
+            <h2>TODO</h2>
+            <h3>TADAM! És kész is!</h3>
+            
+        <div id="flexbox">
+            <section id="listintro">
+                <h1>Teendő részletei</h1>
+                <p>Itt tekintheted meg a kiválasztott teendőt.</p>
+                <p>A teendők módósításához <strong>Módosítom</strong>. Vagy ha visszalépnél a listára, <strong>Mégse</strong>.</p>
+            </section>
+            <div>
+                <div class="username">
+                    Todo Elek
+                </div>
+                <div class="datelocation">
+                    <p>2021.03.28.12:00:00</p>
+                    <p>Budapest</p>
+                    
+                </div>
+            </div>
+            <div>
+                <img id="usericon" src="../img/userimage.jfif" alt=""/>
+            </div>
+        </div>
+        </div>
+    </header>
 
 <nav class="sidenav">
     <a href="todo_list.html" target="_self">Teendők</a>
@@ -38,13 +50,8 @@
 </nav>
 
 <main>
-    <section id="detailsintro">
-        <h1>Teendő részletei</h1>
-        <p>Itt tekintheted meg a kiválasztott teendőt.</p>
-        <p>A teendők módósításához <strong>Módosítom</strong>. Vagy ha visszalépnél a listára, <strong>Mégse</strong>.</p>
-    </section>
     <fieldset id="details">
-        <legend>Teendő adatai</legend>
+        <legend><h2>Teendő adatai</h2></legend>
         <fieldset>
             <legend>Teendő</legend>
             <p>Mene, Mene, Tekel, Ufarszin!</p>
