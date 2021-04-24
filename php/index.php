@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once "todo_head.php"?>
+<?php
+include_once "todo_head.php";
+include_once "todo_userslisting.php";
+$usernametaken = false;
+$regmessage = "";
+
+if(isset($_POST["regform"])){
+    if(!isset($_POST["username"]) || !isset($_POST["loginpw"]) || !isset($_POST["logineml"])){
+        die("<strong>AJVÉ!</strong> Nem töltöttél ki minden kötelező mezőt. <a href='index.php'>Nekifutok újra</a>");
+    }
+    if(strlen($_POST["username"])<5 || $_POST["username"])>25])){
+        die("<strong>AJVÉ!</strong> A felhasználónév legalább 5 és legfeljebb 25 karakter hosszú lehet. <a href='index.php'>Nekifutok újra</a>");
+    }
+    if(strlen($_POST["loginpw"])<10 || $_POST["loginpw"])>25])){
+        die("<strong>AJVÉ!</strong> A jelszó legalább 10 és legfeljebb 25 karakter hosszú lehet. <a href='index.php'>Nekifutok újra</a>");
+    }
+}
+?>
 
 <body>
     <header>
@@ -34,8 +51,10 @@
         <legend>Regisztráció</legend>
         <form action="todo_landing.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
             <label for="regemail">E-mail</label><input class="textinput" id="regemail" name="logineml" type="email" maxlength="50" placeholder="Max. 50 karakter" required/> <br />
-            <label for="regname">Felhasználónév</label><input class="textinput" id="regname" name="username" type="text" maxlength="25" placeholder="Max. 25 karakter" required/> <br />
-            <label for="regpw">Jelszó</label><input class="textinput" id="regpw" name="loginpw" type="password" maxlength="25" placeholder="Max. 25 karakter" required/><br />
+            <label for="regname">Felhasználónév</label><input class="textinput" id="regname" name="username" type="text" maxlength="25" placeholder="Min. 5 és 25 max. karakter" required/> <br />
+            <label for="regpw">Jelszó</label><input class="textinput" id="regpw" name="loginpw" type="password" maxlength="25" placeholder="Min. 10 és 25 max. karakter" required/><br />
+            <label for="regpw">Jelszó újra</label><input class="textinput" id="regpwagain" name="loginpwagain" type="password" maxlength="25" placeholder="Egyezzen a jelszóval" required/><br />
+            <label for="userpic">Kép</label><input class="ok buttoninput" id="userpic" name="userpic" type="file" accept="image/*"/><br />
             <input type="submit" class="ok buttoninput" value="Regisztrálok"/><br />
         </form>
     </fieldset>

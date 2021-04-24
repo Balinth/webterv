@@ -40,7 +40,7 @@
             <label for="useremail">E-mail</label><input class="textinput" id="useremail" name="logineml" type="email" maxlength="50" value="elek.todo@gmail.com" required/> <br />
             <label for="username">Felhasználónév</label><input class="textinput" id="username" name="username" type="text" maxlength="25" value="Elek" required/> <br />
             <label for="userpw">Jelszó</label><input class="textinput" id="userpw" name="loginpw" type="password" maxlength="25" value="t1tk0s.j3lsz0" required/><br />
-            <label for="userpic">Kép</label><input class="ok buttoninput" id="userpic" name="userpic" type="file"/><br />
+            <label for="userpic">Kép</label><input class="ok buttoninput" id="userpic" name="userpic" type="file" accept="image/*"/><br />
             <img id="userpicprev" src="../img/userimage.jfif" alt="Nincs kép"/>
             <input class="ok buttoninput" type="submit" value="Módosítás"/><br />
         </form>
