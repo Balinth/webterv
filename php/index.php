@@ -28,7 +28,9 @@ include_once "todo_head.php";
         <legend>Bejelentkezés</legend>
         <form action="login.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
             <label for="loginemail">E-mail</label><input class="textinput" id="loginemail" name="logineml" type="email" maxlength="50" placeholder="Nagybetűkre figyelj" required/> <br />
+            <?php if(isset($_SESSION['loginemlError'])) {echo 'Ismeretlen felhasználónév!<br/>';} ?>
             <label for="loginpw">Jelszó</label><input class="textinput" id="loginpw" name="loginpw" type="password" maxlength="25" placeholder="Nagybetűkre figyelj" required/><br />
+            <?php if(isset($_SESSION['loginpwError'])) {echo 'Helytelen jelszó!<br/>';} ?>
             <input type="submit" class="ok buttoninput" value="Bejelentkezem"/><br />
         </form>
     </fieldset>
