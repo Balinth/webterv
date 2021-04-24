@@ -94,7 +94,10 @@ class User
             "loginpw" => $this->loginpw,
             "logineml" => $this->logineml,    
             "userpic" => $this->userpic,    
-        ]
+        ];
+    $file = fopen("users.txt", "a");
+    fwrite($file, serialize($user) ."\n");
+    fclose($file);
     }
 
 }
