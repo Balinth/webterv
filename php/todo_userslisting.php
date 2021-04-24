@@ -1,6 +1,5 @@
 <?php
 include_once "todo_user.php";
-session_start();
 $file = fopen("users.txt", "a+");
 $_SESSION["registeredUsers"] = [];
 while (($line = fgets($file)) !== false){
