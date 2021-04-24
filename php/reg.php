@@ -5,7 +5,8 @@
     include_once "todo_userslisting.php";
     $usernametaken = false;
 
-    if(isset($_POST["regform"])){
+    if(isset($_POST["logineml"])){
+        $_SESSION["logineml"] = $_POST["logineml"];
         if(strlen($_POST["logineml"])>50){
             $_SESSION['loginemlLengthError'] = true;
         }

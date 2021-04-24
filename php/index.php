@@ -27,7 +27,10 @@ include_once "todo_head.php";
     <fieldset id="loginform">
         <legend>Bejelentkezés</legend>
         <form action="login.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
-            <label for="loginemail">E-mail</label><input class="textinput" id="loginemail" name="logineml" type="email" maxlength="50" placeholder="Nagybetűkre figyelj" required/> <br />
+            <label for="loginemail">E-mail</label>
+            <input class="textinput" id="loginemail" name="logineml"
+            <?php if(isset($_SESSION["logineml"])) { echo 'value='.$_SESSION["logineml"];} ?>
+             type="email" maxlength="50" placeholder="Nagybetűkre figyelj" required/> <br />
             <?php if(isset($_SESSION['loginemlError'])) {echo 'Ismeretlen felhasználónév!<br/>';} ?>
             <label for="loginpw">Jelszó</label><input class="textinput" id="loginpw" name="loginpw" type="password" maxlength="25" placeholder="Nagybetűkre figyelj" required/><br />
             <?php if(isset($_SESSION['loginpwError'])) {echo 'Helytelen jelszó!<br/>';} ?>
@@ -37,7 +40,10 @@ include_once "todo_head.php";
     <fieldset id="regform">
         <legend>Regisztráció</legend>
         <form action="reg.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
-            <label for="regemail">E-mail</label><input class="textinput" id="regemail" name="logineml" type="email" maxlength="50" placeholder="Max. 50 karakter" required/> <br />
+            <label for="regemail">E-mail</label>
+            <input class="textinput" id="regemail" name="logineml"
+            <?php if(isset($_SESSION["logineml"])) { echo 'value='.$_SESSION["logineml"];} ?>
+            type="email" maxlength="50" placeholder="Max. 50 karakter" required/> <br />
             <?php
                 if(isset($_SESSION['loginemlLengthError'])) {
                     echo 'Legfeljebb 50 karakter hosszú lehet!<br/>';
