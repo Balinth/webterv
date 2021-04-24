@@ -32,7 +32,7 @@
         </div>
     </header>
 
-    <?php createNav("fdsfs", "details")?>
+    <?php createNav("details")?>
 
 <main>
     <fieldset id="details">

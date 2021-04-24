@@ -31,7 +31,7 @@
     </div>
 </header>
 
-<?php createNav("fdsfs", "list")?>
+<?php createNav("list")?>
 
 <main>
     <table class="todolist">

@@ -36,12 +36,12 @@ if(isset($_POST["regform"])){
         </div>
     </header>
 
-    <?php createNav(null, null)?>
+    <?php createNav("landing")?>
 
 <main>
     <fieldset id="loginform">
         <legend>Bejelentkezés</legend>
-        <form action="todo_list.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
+        <form action="login.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
             <label for="loginemail">E-mail</label><input class="textinput" id="loginemail" name="logineml" type="email" maxlength="50" placeholder="Nagybetűkre figyelj" required/> <br />
             <label for="loginpw">Jelszó</label><input class="textinput" id="loginpw" name="loginpw" type="password" maxlength="25" placeholder="Nagybetűkre figyelj" required/><br />
             <input type="submit" class="ok buttoninput" value="Bejelentkezem"/><br />

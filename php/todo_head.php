@@ -1,6 +1,13 @@
 
     <head>
-        <?php include_once "todo_nav.php"?>
+        <?php 
+        session_start();
+        if(isset($_SESSION["user"]) == false){
+            $_SESSION["user"] = null;
+        }
+        
+        include_once "todo_nav.php";
+        ?>
         <meta charset="UTF-8" />
         <meta name="author" content="HB&CsD" />
         <meta name="description" content="Hogy el ne ússz a dolgaiddal!" />

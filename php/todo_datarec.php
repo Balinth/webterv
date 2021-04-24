@@ -32,7 +32,7 @@
         </div>
     </header>
 
-    <?php createNav("fdsfs", "datarec")?>
+    <?php createNav("datarec")?>
 
 <main>
     <fieldset id="todoform">
