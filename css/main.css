@@ -131,6 +131,9 @@ td {
     background-color: #007CC7;
 	box-shadow: 0 0 6px black;
 }
+.sidenavCurrent {
+    background-color: #007CC7;
+}
 
 footer {
     display: flex;

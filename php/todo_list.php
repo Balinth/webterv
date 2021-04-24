@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="HB&CsD" />
-    <meta name="description" content="Hogy el ne ússz a dolgaiddal!" />
-    <meta name="keywords" content="teendő, teendo, feladat, to-do, todo, to do" />
-    <title>TODO - lista</title>
-    <link rel="icon" href="../img/icon.png" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css" />
-    <link rel="stylesheet" type="text/css" media="print" href="../css/print.css"> 
-</head>
+<?php include_once "todo_head.php"?>
 
 <body>
 <header>
@@ -40,13 +31,7 @@
     </div>
 </header>
 
-<div class="sidenav">
-    <a href="todo_list.html" target="_self">Teendők</a>
-    <a href="todo_details.html" target="_self">Részletek</a>
-    <a href="todo_datarec.html" target="_self">Rögzítés</a>
-    <a href="todo_settings.html" target="_self">Beállítások</a>
-    <a href="todo_landing.html" target="_self">Kijelentkezés</a>
-</div>
+<?php createNav("fdsfs", "list")?>
 
 <main>
     <table class="todolist">
