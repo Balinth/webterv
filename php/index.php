@@ -36,13 +36,47 @@ include_once "todo_head.php";
     </fieldset>
     <fieldset id="regform">
         <legend>Regisztráció</legend>
-        <form action="todo_landing.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
+        <form action="reg.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
             <label for="regemail">E-mail</label><input class="textinput" id="regemail" name="logineml" type="email" maxlength="50" placeholder="Max. 50 karakter" required/> <br />
+            <?php
+                if(isset($_SESSION['loginemlLengthError'])) {
+                    echo 'Legfeljebb 50 karakter hosszú lehet!<br/>';
+                }
+            ?>
             <label for="regname">Felhasználónév</label><input class="textinput" id="regname" name="username" type="text" maxlength="25" placeholder="Min. 5 és 25 max. karakter" required/> <br />
+            <?php
+                if(isset($_SESSION['usernameLengthError'])) {
+                    echo 'Legalább 5 és legfeljebb 25 karakter hosszú lehet!<br/>';
+                }
+            ?>
             <label for="regpw">Jelszó</label><input class="textinput" id="regpw" name="loginpw" type="password" maxlength="25" placeholder="Min. 10 és 25 max. karakter" required/><br />
+            <?php
+                if(isset($_SESSION['regpwLengthError'])) {
+                    echo 'Legalább 10 és legfeljebb 25 karakter hosszú lehet!<br/>';    
+                }
+            ?>
             <label for="regpw">Jelszó újra</label><input class="textinput" id="regpwagain" name="loginpwagain" type="password" maxlength="25" placeholder="Egyezzen a jelszóval" required/><br />
+            <?php
+                if(isset($_SESSION['regpwMatchError'])) {
+                    echo 'A két jelszó nem egyezik!<br/>';    
+                }
+            ?>
             <label for="userpic">Kép</label><input class="ok buttoninput" id="userpic" name="userpic" type="file" accept="image/*"/><br />
+            <?php
+                if(isset($_SESSION['userpicFormatError'])) {
+                    echo 'A kép max. 30 Mb méretű és .jpg vagy .png formátumú lehet!<br/>';
+                } else {
+                    if(isset($_SESSION['userpicUploadError'])) {
+                        echo 'A kép feltöktése nem sikerült!<br/>';    
+                    }
+                }
+            ?>
             <input type="submit" class="ok buttoninput" value="Regisztrálok"/><br />
+            <?php
+                if(isset($_SESSION['regMessage'])) {
+                    echo 'Sikeres regisztráció. Jelentkezz be!<br/>';
+                }
+            ?>
         </form>
     </fieldset>
 </main>
