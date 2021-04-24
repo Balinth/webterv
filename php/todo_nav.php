@@ -9,7 +9,7 @@ function currentNav($current){
     return '<div class="sidenavCurrent">' . $current . '</div>';
 }
 
-function createNav($user, $onPage){
+function createNav($onPage){
 
     $begin = '<nav class="sidenav">';
     $end = '</nav>';
@@ -18,8 +18,8 @@ function createNav($user, $onPage){
     $landing = '
     <a href="index.php" target="_self">Kezdőlap</a>
     ';
-    $signout = '
-    <a href="index.php" target="_self">Kijelentkezés</a>
+    $logout = '
+    <a href="logout.php" target="_self">Kijelentkezés</a>
     ';
     $list = '
     <a href="todo_list.php" target="_self">Teendők</a>
@@ -34,20 +34,23 @@ function createNav($user, $onPage){
     <a href="todo_details.php" target="_self">Részletek</a>
     ';
 
-    if($user == null){
+    if($onPage == "landing" || isset($_SESSION['user']) == false || $_SESSION["user"] == null){
         echo($begin . currentNav($landing) . $end);
     }
     else if($onPage == "details"){
-        echo($begin . $list . currentNav($details) . $datarec . $settings . $signout . $end);
+        echo($begin . $list . currentNav($details) . $datarec . $settings . $logout . $end);
     }
     else if($onPage == "list"){
-        echo($begin . currentNav($list) . $details . $datarec . $settings . $signout . $end);
+        echo($begin . currentNav($list) . $details . $datarec . $settings . $logout . $end);
     }
     else if($onPage == "settings"){
-        echo($begin . $list . $details . $datarec . currentNav($settings) . $signout . $end);
+        echo($begin . $list . $details . $datarec . currentNav($settings) . $logout . $end);
     }
     else if($onPage == "datarec"){
-        echo($begin . $list . $details . currentNav($datarec) . $settings . $signout . $end);
+        echo($begin . $list . $details . currentNav($datarec) . $settings . $logout . $end);
+    }
+    else{
+        echo $_SESSION["user"] . $onPage;
     }
     return;
 }

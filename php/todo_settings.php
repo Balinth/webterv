@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <?php createNav("fdsfs", "settings")?>
+    <?php createNav("settings")?>
 
 <main>
     <fieldset id="userdataform">
