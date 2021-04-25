@@ -45,11 +45,13 @@
         $_SESSION['reqFieldError'] = true;
         $processUser = false;
     }
-    for($i = 0; $i < count($_SESSION["registeredUsers"]);$i++){
-        if($_SESSION["registeredUsers"][$i]->getUsername() == $_POST["username"]){
-            $_SESSION['usernameTaken'] = true;
-            $processUser = false;
-        }
+    if(
+        isset($_POST["logineml"])
+        && isset($_SESSION['registeredUsers'])
+        && isset($_SESSION['registeredUsers'][$_POST["logineml"]]))
+        {
+        $_SESSION['emailAlreadyInUse'] = true;
+        $processUser = false;
     }
     if(isset($_FILES["userpic"])){
         $extensions = ["jpg", "jpeg", "jfif", "png"];

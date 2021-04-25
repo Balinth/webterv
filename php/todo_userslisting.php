@@ -5,7 +5,7 @@ $_SESSION["registeredUsers"] = [];
 while (($line = fgets($file)) !== false){
     $item = unserialize($line);
     $newUser = new User($item["username"],$item["loginpw"],$item["logineml"],$item["userpic"]);
-    array_push($_SESSION["registeredUsers"], $newUser);
+    $_SESSION["registeredUsers"][$item['logineml']] = $newUser;
 }
 fclose($file);
 ?>

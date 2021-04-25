@@ -51,6 +51,9 @@ include_once "panel_commissar.php";
                 if(isset($_SESSION['loginemlLengthError'])) {
                     echo 'Legfeljebb 50 karakter hosszú lehet!<br/>';
                 }
+                if(isset($_SESSION['emailAlreadyInUse'])) {
+                    echo 'Ezzel az email-el már regisztráltak.<br/>';
+                }
             ?>
             <label for="regname">Felhasználónév</label>
             <input class="textinput" id="regname" name="username"
@@ -59,9 +62,6 @@ include_once "panel_commissar.php";
             <?php
                 if(isset($_SESSION['usernameLengthError'])) {
                     echo 'A hossza 5-25 karakter lehet.<br/>';
-                }
-                if(isset($_SESSION['usernameTaken'])) {
-                    echo 'A felhasználónév már foglalt.<br/>';
                 }
             ?>
             <label for="regpw">Jelszó</label><input class="textinput" id="regpw" name="loginpw" type="password" maxlength="25" placeholder="Min. 10 és 25 max. karakter" required/><br />
