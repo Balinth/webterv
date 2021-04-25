@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include_once "todo_head.php"?>
+<?php
+include_once "todo_head.php";
+include_once "panel_header.php";
+include_once "panel_footer.php";
+include_once "panel_commissar.php";
+?>
 
 <body>
     <header>
@@ -71,28 +76,9 @@
 
 </main>
 
-<article id="motivation">
-    <h2>Napi lelkesítő</h2>
-    <ul>
-        <li class="quote"><q>Annyira tettre kész vagyok, hogy a nevem valójában ige kellene, hogy legyen.</q><br /><span class="commissar">- graffiti</span></li>
-        <li class="quote"><q>A tett halála az okoskodás.</q><br /><span class="commissar">- Lucifer, Az ember tragédiája</span></li>
-        <li class="quote"><q>A racionalitás a tettekben lakozik, nem a gondolatokban vagy abban, amit 'hisz' az ember.</q><br /><span class="commissar">- Nassim Nicholas Taleb</span></li>
-    </ul>
-</article>
+<?php commissarPanel()?>
 
-<footer>
-    <div id="contact">
-        <p class="tag">Készítette:</p> <p class="value">Harmat Bálint &amp; Csobay Dávid</p>
-        <p class="tag">Kapcsolat:</p> <a class="value" href="https://www.coosp.etr.u-szeged.hu/" target="_blank">@ SZTE Coospace</a>
-        <p class="tag">Copy?</p> <p class="value">Right!</p>
-    </div>
-
-    <div id="version">
-        <p class="tag">Verzió:</p> <p class="value">1.0</p>
-        <p class="tag">Frissítve:</p> <p class="value">2021. 03. 28.</p>
-        <p class="tag">Tesztelt böngészők:</p> <p class="value">Chrome, Edge</p>
-    </div>
-</footer>
+<?php footerPanel()?>
 
 </body>
 

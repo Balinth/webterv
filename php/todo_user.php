@@ -18,7 +18,7 @@ class User
     {
         $this->username = $username;
         $this->loginpw = $loginpw;
-        $this->logineml = $loginpw;
+        $this->logineml = $logineml;
         $this->userpic = $userpic;
     }
 
