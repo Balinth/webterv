@@ -1,5 +1,1 @@
-a:4:{s:8:"username";s:5:"Xabei";s:7:"loginpw";s:10:"1234567890";s:8:"logineml";s:17:"csoda33@gmail.com";s:7:"userpic";s:9:"Xabei.jpg";}
-a:4:{s:8:"username";s:6:"Xabei1";s:7:"loginpw";s:10:"1234567890";s:8:"logineml";s:17:"csoda33@gmail.com";s:7:"userpic";s:7:"Xabei1.";}
-a:4:{s:8:"username";s:6:"Xabei5";s:7:"loginpw";s:10:"1234567890";s:8:"logineml";s:17:"csoda33@gmail.com";s:7:"userpic";s:10:"Xabei5.jpg";}
-a:4:{s:8:"username";s:8:"testelek";s:7:"loginpw";s:16:"testelektestelek";s:8:"logineml";s:18:"testelek@gmail.com";s:7:"userpic";s:9:"testelek.";}
-a:4:{s:8:"username";s:9:"testelek2";s:7:"loginpw";s:12:"testelek2222";s:8:"logineml";s:18:"testelek@gmail.com";s:7:"userpic";s:10:"testelek2.";}
+a:4:{s:8:"username";s:5:"Xabei";s:7:"loginpw";s:10:"1234567890";s:8:"logineml";s:17:"csoda33@gmail.com";s:7:"userpic";s:21:"csoda33@gmail.com.png";}

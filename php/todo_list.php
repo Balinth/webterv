@@ -9,6 +9,7 @@ include_once "panel_commissar.php";
 ?>
 
 <body>
+
 <header>
     <div id="brand">
         <h2>TODO</h2>
@@ -39,6 +40,10 @@ include_once "panel_commissar.php";
 <?php createNav("list")?>
 
 <main>
+    <section id="listintro">
+            <h1>Teendők</h1>
+            <p>Az alábbiakban láthatod a teendőid listáját. A listát az <strong>oszlopok fejlécére</strong> kattintva rendezheted. Az <strong>teendők címére kattintva</strong> megnyithatod az adott elem részletes leírását.</p>
+    </section>
     <table class="todolist">
         <caption>A teendőid</caption>
         <tr>

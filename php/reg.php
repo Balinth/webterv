@@ -60,7 +60,7 @@
         if(in_array($picExtension,$extensions)){
             if($_FILES["userpic"]["error"] === 0){
                 if($_FILES["userpic"]["size"] <= 31457280){
-                    $target = "profile/" . $_POST["username"] . "." . $picExtension;
+                    $target = "../profile/" . $_POST["logineml"] . "." . $picExtension;
                     if(!move_uploaded_file($_FILES["userpic"]["tmp_name"], $target)){
                         $_SESSION['userpicUploadError'] = true;
                     }
@@ -76,7 +76,7 @@
     }
 
     if($processUser == true){
-        $new = new User($_POST["username"],$_POST["loginpw"],$_POST["logineml"],$_POST["username"].".".$picExtension);
+        $new = new User($_POST["username"],$_POST["loginpw"],$_POST["logineml"],$_POST["logineml"].".".$picExtension);
         array_push($_SESSION["registeredUsers"],$new);
         $new -> tofile();    
         $_SESSION['regMessage'] = true;
