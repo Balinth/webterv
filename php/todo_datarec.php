@@ -20,19 +20,7 @@ include_once "panel_commissar.php";
                 <p>Itt vehetsz fel új teendőket.</p>
                 <p>Add meg az adatokat. Ha minden okés, <strong>Rögzít</strong>. Ha nagyon elrontottad, kezdd <strong>Újra</strong>. Ha mégsem vennél fel új teendőt, <strong>Mégse</strong>, és örülj, hogy ennyivel is kevesebb a teendőd.</p>
             </section>
-            <div>
-                <div class="username">
-                    Todo Elek
-                </div>
-                <div class="datelocation">
-                    <p>2021.03.28.12:00:00</p>
-                    <p>Budapest</p>
-                    
-                </div>
-            </div>
-            <div>
-                <img id="usericon" src="../img/userimage.jfif" alt=""/>
-            </div>
+            <?php headerPanel() ?>
         </div>
         </div>
     </header>

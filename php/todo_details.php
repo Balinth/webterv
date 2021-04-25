@@ -20,19 +20,7 @@ include_once "panel_commissar.php";
                 <p>Itt tekintheted meg a kiválasztott teendőt.</p>
                 <p>A teendők módósításához <strong>Módosítom</strong>. Vagy ha visszalépnél a listára, <strong>Mégse</strong>.</p>
             </section>
-            <div>
-                <div class="username">
-                    Todo Elek
-                </div>
-                <div class="datelocation">
-                    <p>2021.03.28.12:00:00</p>
-                    <p>Budapest</p>
-                    
-                </div>
-            </div>
-            <div>
-                <img id="usericon" src="../img/userimage.jfif" alt=""/>
-            </div>
+            <?php headerPanel() ?>
         </div>
         </div>
     </header>
@@ -65,9 +53,15 @@ include_once "panel_commissar.php";
             <legend>Leírás</legend>
             <p><?php echo $todo->getDesc(); ?></p>
         </fieldset>
-            <input class="buttoninput ok" id="modify" name="cancel" type="button" value="Módosítom"
-                onclick="window.location.href="todo_datarec.php?todo='<?php echo ($_GET['todo']); ?>'
-                />
+            <?php
+                echo(
+                    '<form action="todo_datarec.php">
+                        <input class="buttoninput ok" id="modify" name="todo"  type="submit" value="Módosítom" />
+                        <input type="hidden" name="todo" value="' . $_GET['todo'] . '" />
+                    </form>
+                    '
+                );
+            ?>
             <input class="buttoninput cancel" id="cancel" name="cancel" type="button" value="Mégse" onclick="window.location.href='todo_list.php'"/>
     </fieldset>
 

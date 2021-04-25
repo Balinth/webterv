@@ -3,38 +3,32 @@
     include_once "todo_userslisting.php";
 
     function headerPanel(){
-        echo '
-            <header>
-                <div id=\"brand\">
-                    <h2>TODO</h2>
-                    <h3>TADAM! És kész is!</h3>
-                </div>
-                <img id="usericon" src="../img/index.png" width="100" height="100" alt=""/>
-                <div id="flexbox">
-                    <div>
-            ';
-        if(isset($_SESSION["user"])){
-            echo '
-                        <div class="username">
-                            <p>Szia '.$_SESSION["registeredUsers"][$_SESSION["user"]]->getUsername().'!</p>
-                        </div>
-                        <img id="usericon" src="../profile/'.$_SESSION["registeredUsers"][$_SESSION["user"]]->getLogineml().'" width="100" height="100" alt=""/>                    
-            ';
-        } else {
-            echo '
-                        <div class="username">
-                            <p>Szia! Jelentkezz be!</p>
-                        </div>
-            ';
+
+        $username = "Jelentkezz be!";
+
+        if(isset($_SESSION['user'])){
+            $username = $_SESSION['registeredUsers'][$_SESSION['user']]->getUserName();
         }
+
         echo '
-                        <div class="datelocation">
-                            <p>2021.03.28.12:00:00</p>
-                            <p>Budapest</p>
-                        </div>
-                    <div>
+                <div>
+                    <div class="username">'
+                    .
+                    $username
+                    .'
+                        
+                    </div>
+                    <div class="datelocation">
+                        <p>' . date("Y/m/d") . '</p>
+                        <p>Budapest</p>
+                        
+                    </div>
                 </div>
-            </header>
-        ';
+                <div>
+                    <img id="usericon" src="../img/userimage.jfif" alt=""/>
+                </div>
+                ';
+
     }
+
 ?>

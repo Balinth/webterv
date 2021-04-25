@@ -26,19 +26,7 @@ if(isset($_SESSION['user']) == false || $_SESSION['user'] == null){
             <h1>Teendők</h1>
             <p>Az alábbiakban láthatod a teendőid listáját. A listát az <strong>oszlopok fejlécére</strong> kattintva rendezheted. Az <strong>teendők címére kattintva</strong> megnyithatod az adott elem részletes leírását.</p>
         </section>
-        <div>
-            <div class="username">
-                Todo Elek
-            </div>
-            <div class="datelocation">
-                <p>2021.03.28.12:00:00</p>
-                <p>Budapest</p>
-                
-            </div>
-        </div>
-        <div>
-            <img id="usericon" src="../img/userimage.jfif" alt=""/>
-        </div>
+            <?php headerPanel() ?>
     </div>
     </div>
 </header>
@@ -46,10 +34,6 @@ if(isset($_SESSION['user']) == false || $_SESSION['user'] == null){
 <?php createNav("list")?>
 
 <main>
-    <section id="listintro">
-            <h1>Teendők</h1>
-            <p>Az alábbiakban láthatod a teendőid listáját. A listát az <strong>oszlopok fejlécére</strong> kattintva rendezheted. Az <strong>teendők címére kattintva</strong> megnyithatod az adott elem részletes leírását.</p>
-    </section>
     <table class="todolist">
         <caption>A teendőid</caption>
         <tr>
