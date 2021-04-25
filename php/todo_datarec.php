@@ -6,6 +6,14 @@ include_once "todo_head.php";
 include_once "panel_header.php";
 include_once "panel_footer.php";
 include_once "panel_commissar.php";
+
+if(isset($_GET['todo'])){
+    $todo = $_SESSION['registeredUsers'][$_SESSION['user']]->getTodos()[$_GET['todo']];
+}
+else {
+    $todo = null;
+}
+
 ?>
 
 <body>
@@ -31,11 +39,21 @@ include_once "panel_commissar.php";
     <fieldset id="todoform">
         <legend>Teendő adatai</legend>
         <form action="datarec.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
-            <label class="inputlabel" for="todotitle">Teendő</label><input class="textinput" id="todotitle" name="todotitle" type="text" size="100" maxlength="100" placeholder="Teendő címe" required /> <br />
-            <label class="inputlabel" for="todotags">Címkék</label><input class="textinput" id="todotags" name="todotags" type="text" size="100" maxlength="100" placeholder="Címkék" /><br />
-            <label class="inputlabel" for="tododescription">Leírás</label><textarea class="textinput" id="tododescription" name="tododescription" cols="100" rows="10" maxlength="1000" placeholder="Teendő leírása (max. 1000 karakter)"></textarea><br />
-            <label class="inputlabel" for="tododuedate">Határidő</label><input class="dateinput" id="tododuedate" name="tododuedate" type="date" required /><br />
-            <label class="inputlabel" for="todostatus">Állapot</label><select class="textinput" id="todostatus" name="todostatus" required>
+            <label class="inputlabel" for="todotitle">Teendő</label><input class="textinput" id="todotitle"
+            <?php if($todo != null) { echo 'value="'. $todo->getName() . '"';} ?>
+            name="todotitle" type="text" size="100" maxlength="100" placeholder="Teendő címe" required /> <br />
+            <label class="inputlabel" for="todotags">Címkék</label><input class="textinput" id="todotags"
+            <?php if($todo != null) { echo 'value="'. $todo->getTags() . '"';} ?>
+            name="todotags" type="text" size="100" maxlength="100" placeholder="Címkék" /><br />
+            <label class="inputlabel" for="tododescription">Leírás</label><textarea class="textinput" id="tododescription"
+            <?php if($todo != null) { echo 'value="'. $todo->getDesc() . '"';} ?>
+            name="tododescription" cols="100" rows="10" maxlength="1000" placeholder="Teendő leírása (max. 1000 karakter)"></textarea><br />
+            <label class="inputlabel" for="tododuedate">Határidő</label><input class="dateinput" id="tododuedate"
+            <?php if($todo != null) { echo 'value="'. $todo->getDue() . '"';} ?>
+            name="tododuedate" type="date" required /><br />
+            <label class="inputlabel" for="todostatus">Állapot</label><select class="textinput" id="todostatus"
+            <?php if($todo != null) { echo 'value="'. $todo->getState() . '"';} ?>
+            name="todostatus" required>
                 <option value="Folyamatban" selected>Folyamatban</option>
                 <option value="Kész">Kész</option>
                 <option value="Később">Később</option>

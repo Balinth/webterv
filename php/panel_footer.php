@@ -10,7 +10,7 @@
 
                 <div id="version">
                     <p class="tag">Verzió:</p> <p class="value">1.0</p>
-                    <p class="tag">Frissítve:</p> <p class="value">2021. 03. 28.</p>
+                    <p class="tag">Frissítve:</p> <p class="value">2021. 04. 25.</p>
                     <p class="tag">Tesztelt böngészők:</p> <p class="value">Chrome, Edge</p>
                 </div>
             </footer>

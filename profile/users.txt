@@ -1,0 +1,1 @@
+a:4:{s:8:"username";s:9:"TestElek3";s:7:"loginpw";s:11:"testelek123";s:8:"logineml";s:18:"testelek@gmail.com";s:7:"userpic";s:22:"testelek@gmail.com.png";}

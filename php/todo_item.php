@@ -12,6 +12,7 @@ class Todo
     {
         $this->name = $name;
         $this->tags = $tags;
+        $this->description = $description;
         $this->due = $due;
         $this->state = $state;
     }

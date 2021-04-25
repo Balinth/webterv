@@ -5,9 +5,10 @@
     function headerPanel(){
 
         $username = "Jelentkezz be!";
-
+        $userpic = "../img/userimage.jfif";
         if(isset($_SESSION['user'])){
             $username = $_SESSION['registeredUsers'][$_SESSION['user']]->getUserName();
+            $userpic = '../profile/' . $_SESSION['registeredUsers'][$_SESSION['user']]->getUserpic();
         }
 
         echo '
@@ -25,7 +26,7 @@
                     </div>
                 </div>
                 <div>
-                    <img id="usericon" src="../img/userimage.jfif" alt=""/>
+                    <img id="usericon" src="' . $userpic .'" alt=""/>
                 </div>
                 ';
 

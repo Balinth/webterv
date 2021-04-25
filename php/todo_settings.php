@@ -29,25 +29,9 @@ include_once "panel_commissar.php";
     <?php createNav("settings")?>
 
 <main>
-    <section id="listintro">
-                <h1>Beállítások</h1>
-                <p>Itt <strong>módosíthatod</strong> a felhasználói adataidat.</p>
-    </section>
     <fieldset id="userdataform">
         <legend>Felhasználói adatok</legend>
         <form action="changeuser.php" method="post" enctype="multipart/form-data" autocomplete="off">
-            <label for="useremail">E-mail</label>
-            <input class="textinput" id="useremail" name="logineml"
-            <?php if(isset($_SESSION["user"])) { echo 'value='.$_SESSION["registeredUsers"][$_SESSION["user"]]->getLogineml();} ?>
-            type="email" maxlength="50" placeholder="Max. 50 karakter" required/> <br />
-            <?php
-                if(isset($_SESSION['loginemlLengthError'])) {
-                    echo 'Legfeljebb 50 karakter hosszú lehet!<br/>';
-                }
-                if(isset($_SESSION['emailAlreadyInUse'])) {
-                    echo 'Ezzel az email-el már regisztráltak.<br/>';
-                }
-            ?>
             <label for="username">Felhasználónév</label>
             <input class="textinput" id="username" name="username"
             <?php if(isset($_SESSION["user"])) { echo 'value='.$_SESSION["registeredUsers"][$_SESSION["user"]]->getUsername();} ?>
