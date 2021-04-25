@@ -118,10 +118,41 @@ class User
             "logineml" => $this->logineml,    
             "userpic" => $this->userpic,    
         ];
-    $file = fopen("users.txt", "a");
-    fwrite($file, serialize($user) ."\n");
-    $this->saveTodoFile();
-    fclose($file);
+        $file = fopen("users.txt", "a");
+        fwrite($file, serialize($user) ."\n");
+        $this->saveTodoFile();
+        fclose($file);
+    }
+
+    public function changefile()
+    {
+        $user = [
+            "username" => $this->username,
+            "loginpw" => $this->loginpw,
+            "logineml" => $this->logineml,    
+            "userpic" => $this->userpic,    
+        ];
+        $file = fopen("users.txt", "a");
+        $dumpfile = fopen("usersdump.txt", "a");
+        while (($line = fgets($file)) !== false){
+            $item = unserialize($line);
+            if($item["logineml"] !== $_SESSION["user"]["logineml"]){
+                fwrite($dumpfile, serialize($item) ."\n");
+            }
+        }
+        fclose($file);
+        unlink("users.txt");
+
+        $file = fopen("users.txt", "a");
+        while (($line = fgets($dumpfile)) !== false){
+            $item = unserialize($line);
+            fwrite($file, serialize($item) ."\n");
+        }
+        fclose($dumpfile);
+        unlink("usersdump.txt");
+
+        fwrite($file, serialize($user) ."\n");
+        fclose($file);
     }
 
 }

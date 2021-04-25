@@ -6,6 +6,9 @@ include_once "todo_head.php";
 include_once "panel_header.php";
 include_once "panel_footer.php";
 include_once "panel_commissar.php";
+
+$datum = new DateTime();
+$datum->setTimezone(new DateTimeZone("Europe/Budapest"));         // időzóna megadása
 ?>
 
 <body>
@@ -80,6 +83,9 @@ include_once "panel_commissar.php";
             ?>
             <input type="submit" class="ok buttoninput" value="Regisztrálok"/><br />
             <?php
+                if(isset($_SESSION['reqFieldError'])) {
+                    echo 'Minden kötelező mezőt ki kell tölteni!<br/>';
+                }
                 if(isset($_SESSION['regMessage'])) {
                     echo 'Sikeres regisztráció. Jelentkezz be!<br/>';
                 }
