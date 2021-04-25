@@ -40,38 +40,35 @@ include_once "panel_commissar.php";
     <?php createNav("details")?>
 
 <main>
+    <?php
+        $todo = $_SESSION['registeredUsers'][$_SESSION['user']]->getTodos()[$_GET['todo']];
+    ?>
     <fieldset id="details">
         <legend><h2>Teendő adatai</h2></legend>
         <fieldset>
             <legend>Teendő</legend>
-            <p>Mene, Mene, Tekel, Ufarszin!</p>
+            <p><?php echo $todo->getName(); ?></p>
         </fieldset>
         <fieldset>
             <legend>Címkék</legend>
-            <p>Fontos, Kihalás</p>
+            <p><?php echo $todo->getTags(); ?></p>
         </fieldset>
         <fieldset>
             <legend>Határidő</legend>
-            <p>2001.01.01</p>
+            <p><?php echo $todo->getDue(); ?></p>
         </fieldset>
         <fieldset>
             <legend>Állapot</legend>
-            <p>Elnapolva</p>
+            <p><?php echo $todo->getState(); ?></p>
         </fieldset>
         <fieldset>
             <legend>Leírás</legend>
-            <p>Mene, Mene, Tekel, Ufarszin! Ez pedig e szavaknak az értelme: Mene, azaz számba vette Isten a te országlásodat és véget vet annak. Tekel, azaz megmérettél a mérlegen és híjjával találtattál. Peresz, azaz elosztatott a te országod és adatott a médeknek és persáknak.</p>
+            <p><?php echo $todo->getDesc(); ?></p>
         </fieldset>
-        <fieldset>
-            <legend>Rögzítve</legend>
-            <p>2000.12.31</p>
-        </fieldset>
-        <fieldset>
-            <legend>Utolsó módosítás</legend>
-            <p>2001.01.01</p>
-        </fieldset>
-            <input class="buttoninput ok" id="modify" name="cancel" type="button" value="Módosítom" onclick="window.location.href='todo_datarec.html'"/>
-            <input class="buttoninput cancel" id="cancel" name="cancel" type="button" value="Mégse" onclick="window.location.href='todo_list.html'"/>
+            <input class="buttoninput ok" id="modify" name="cancel" type="button" value="Módosítom"
+                onclick="window.location.href="todo_datarec.php?todo='<?php echo ($_GET['todo']); ?>'
+                />
+            <input class="buttoninput cancel" id="cancel" name="cancel" type="button" value="Mégse" onclick="window.location.href='todo_list.php'"/>
     </fieldset>
 
 </main>
