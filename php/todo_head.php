@@ -1,6 +1,9 @@
 
     <head>
-        <?php 
+        <?php
+        include_once 'todo_user.php';
+        include_once 'todo_item.php';
+        include_once 'todo_userslisting.php';
         session_start();
         if(isset($_SESSION["user"]) == false){
             $_SESSION["user"] = null;

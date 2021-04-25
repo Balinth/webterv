@@ -1,11 +1,15 @@
 <?php
 
+include_once 'todo_item.php';
+
 class User
 {
     private $username;
     private $loginpw;
     private $logineml;
     private $userpic;
+
+    private $todos;
 
     /**
      * User constructor
@@ -86,6 +90,25 @@ class User
         $this->userpic = $userpic;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getTodos()
+    {
+        return $this->todos;
+    }
+
+    public function setTodos($todos): void
+    {
+        $this->todos = $todos;
+    }
+
+    public function saveTodoFile() : void
+    {
+        $todoFile = fopen($this->logineml . '_todos.txt', 'w');
+        fwrite($todoFile, serialize($this->todos));
+        fclose($todoFile);
+    }
 
     public function tofile()
     {
@@ -97,6 +120,7 @@ class User
         ];
     $file = fopen("users.txt", "a");
     fwrite($file, serialize($user) ."\n");
+    $this->saveTodoFile();
     fclose($file);
     }
 

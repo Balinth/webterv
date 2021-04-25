@@ -42,20 +42,25 @@ include_once "panel_commissar.php";
 <main>
     <fieldset id="todoform">
         <legend>Teendő adatai</legend>
-        <form action="todo_list.html" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
+        <form action="datarec.php" method="post" enctype="application/x-www-form-urlencoded" autocomplete="off">
             <label class="inputlabel" for="todotitle">Teendő</label><input class="textinput" id="todotitle" name="todotitle" type="text" size="100" maxlength="100" placeholder="Teendő címe" required /> <br />
             <label class="inputlabel" for="todotags">Címkék</label><input class="textinput" id="todotags" name="todotags" type="text" size="100" maxlength="100" placeholder="Címkék" /><br />
             <label class="inputlabel" for="tododescription">Leírás</label><textarea class="textinput" id="tododescription" name="tododescription" cols="100" rows="10" maxlength="1000" placeholder="Teendő leírása (max. 1000 karakter)"></textarea><br />
             <label class="inputlabel" for="tododuedate">Határidő</label><input class="dateinput" id="tododuedate" name="tododuedate" type="date" required /><br />
             <label class="inputlabel" for="todostatus">Állapot</label><select class="textinput" id="todostatus" name="todostatus" required>
-                <option value="inprogress" selected>Folyamatban</option>
-                <option value="done">Kész</option>
-                <option value="later">Később</option>
-                <option value="postponed">Elnapolva</option>
+                <option value="Folyamatban" selected>Folyamatban</option>
+                <option value="Kész">Kész</option>
+                <option value="Később">Később</option>
+                <option value="Elnapolva">Elnapolva</option>
             </select> <br />
+            <?php
+                if(isset($_GET['todo'])){
+                    echo '<input type="hidden" name="todo" value="' . $_GET['todo'] . '"/>';
+                }
+            ?>
             <input class="buttoninput ok" id="submit" name="submit" type="submit" value="Rögzít" />
             <input class="buttoninput cancel" id="reset" name="reset" type="reset" value="Újra" />
-            <input class="buttoninput cancel" id="cancel" name="cancel" type="button" value="Mégse" onclick="window.location.href='todo_list.html'"/>
+            <input class="buttoninput cancel" id="cancel" name="cancel" type="button" value="Mégse" onclick="window.location.href='todo_list.php'"/>
         </form>
     </fieldset>
 </main>

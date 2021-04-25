@@ -1,6 +1,7 @@
 <?php
     session_start();
     session_unset();
+    include_once "todo_item.php";
     include_once "todo_user.php";
     include_once "todo_userslisting.php";
 
@@ -12,7 +13,7 @@
             && isset($_SESSION['registeredUsers'][$_POST["logineml"]])){
             $user = $_SESSION['registeredUsers'][$_POST["logineml"]];
             if ($_POST['loginpw'] == $user->getLoginpw()){
-                $_SESSION["user"] = $user;
+                $_SESSION["user"] = $_POST["logineml"];
                 header("Location: todo_list.php");
                 return;
             }
