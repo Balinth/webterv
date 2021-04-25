@@ -30,24 +30,21 @@ function createNav($onPage){
     $settings = '
     <a href="todo_settings.php" target="_self">Beállítások</a>
     ';
-    $details = '
-    <a href="todo_details.php" target="_self">Részletek</a>
-    ';
 
     if($onPage == "landing" || isset($_SESSION['user']) == false || $_SESSION["user"] == null){
         echo($begin . currentNav($landing) . $end);
     }
     else if($onPage == "details"){
-        echo($begin . $list . currentNav($details) . $datarec . $settings . $logout . $end);
+        echo($begin . currentNav($list) . $datarec . $settings . $logout . $end);
     }
     else if($onPage == "list"){
-        echo($begin . currentNav($list) . $details . $datarec . $settings . $logout . $end);
+        echo($begin . currentNav($list) . $datarec . $settings . $logout . $end);
     }
     else if($onPage == "settings"){
-        echo($begin . $list . $details . $datarec . currentNav($settings) . $logout . $end);
+        echo($begin . $list . $datarec . currentNav($settings) . $logout . $end);
     }
     else if($onPage == "datarec"){
-        echo($begin . $list . $details . currentNav($datarec) . $settings . $logout . $end);
+        echo($begin . $list . currentNav($datarec) . $settings . $logout . $end);
     }
     else{
         echo $_SESSION["user"] . $onPage;

@@ -10,8 +10,22 @@ include_once "panel_commissar.php";
 
 
 <body>
-    <?php headerPanel()?>
     
+<header>
+    <div id="brand">
+        <h2>TODO</h2>
+        <h3>TADAM! És kész is!</h3>
+        
+    <div id="flexbox">
+        <section id="listintro">
+            <h1>Beállítások</h1>
+            <p>Itt <strong>módosíthatod</strong> a felhasználói adataidat.</p>
+        </section>
+            <?php headerPanel() ?>
+    </div>
+    </div>
+</header>
+
     <?php createNav("settings")?>
 
 <main>
